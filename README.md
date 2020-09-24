@@ -16,7 +16,7 @@ When you have validated your form, you should be able to submit the form. Submit
 fetch('https://momentum-server.glitch.me/parking', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ formData: { name: nameFromYourForm })
+    body: JSON.stringify({ formData: { name: nameFromYourForm }})
     })
     .then(res => res.json())
     .then(res => {
@@ -24,7 +24,7 @@ fetch('https://momentum-server.glitch.me/parking', {
     })
 ```
 
-But you must prevent the form from being submitted before it's been validated! To do that, use `event.preventDefault` inside your event listener for the form submission.
+But you must prevent the form from being submitted before it's been validated! To do that, use `event.preventDefault()` inside your event listener for the form submission.
 
 When all the fields on the form are valid, you should send the POST request. When you receive a successful response from the server, you should display a message on the page telling the user that the form was submitted successfully. How this message looks is totally up to you.
 
